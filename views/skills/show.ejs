@@ -11,5 +11,9 @@
     <p>
         <%= skill.complete ? `GA has taught me a lot about ${skill.skill}!`: `I am still in the process of learning ${skill.skill}!` %>
     </p>
+    <form action="/skills/<%= skill.id %>?_method=DELETE" method="POST">
+        <button type="submit">DELETE</button>
+    </form>
+    <a href="/skills/<%= skill.id %>/edit">Edit Skill</a>
 </body>
 </html>
