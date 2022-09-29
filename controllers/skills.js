@@ -50,5 +50,5 @@ function edit(req, res){
 function update(req, res){
     req.body.complete = req.body.complete === 'on'
     Skill.update(req.params.id, req.body);
-    res.redirect('/skills')
+    res.redirect(`/skills/${req.params.id}`)
 }
